@@ -15,7 +15,7 @@
 - MVC - model, view, controller. In Django, we have MVT (model, view, template)
 - Models - in the **app** folder, used for database purpose
 - Views - HTML rendered templates, in the **resources/views**, blade.php
-- Controller - in the **app/Http/Controllers** folder, the main logic of app, it retrieves data from models and renders views
+- Controller - in the **app/Http/Controllers** folder, the main logic of app, it retrieves data from models and renders views, it can also send the parameters to the **blade.php**
 - Routes - urls, in the **routes/web.php**
 
 ## Routes
@@ -58,6 +58,18 @@
     ```php
     Route::get('/', 'App\Http\Controllers\PagesController@index');
     ```
+- Now you can create as many methods inside the **PagesController** class, and don't forget to specify them in routes 
 
 ## Blade Templates, Views
+- Create main html template with `@yield('content')`
+- Then in other html files inherit it using:
+    ```html
+    @extends('layouts.app')
+    
+    @section('content')
+        <h1>Welcome!</h1>
+    @endsection
+    ```
+
+
 
