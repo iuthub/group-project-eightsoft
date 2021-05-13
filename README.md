@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -60,3 +61,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+[![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=402169&assignment_repo_type=GroupAssignmentRepo)
+# Internet Programming: Group Project Assignment
+
+Find `ip_group_project.pdf` file in this folder, and refer to all the instructions given there. 
+
+You have to submit your project into this repository before 23.05.2021 (midnight).
+
+# Checkpoints
+>>>>>>> 3a17d955b4780d98f875d54a075858337088b7f6
