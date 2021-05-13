@@ -70,6 +70,5 @@
         <h1>Welcome!</h1>
     @endsection
     ```
-
-
+- How to pass the parameters from controller?
 
