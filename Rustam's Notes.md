@@ -71,4 +71,39 @@
     @endsection
     ```
 - How to pass the parameters from controller?
+    ```php
+    public function index() {
+        $title = "Welcome to our blog!";
+        return view('pages.index', compact("title")); 
+        // OR return view('pages.index')->with('title', $title); 
+    }
+    ```
+    ```html
+    <h3>{{ $title }}</h3>
+    ```
 
+## Authentication / Authorization
+- Create MySQL database and update the info
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
+- php composer.phar require laravel/breeze --dev
+- php artisan breeze:install
+- npm install # front-end
+- npm run dev
+- php artisan migrate
+
+- Second way
+    - Installing Node and NPM on M1, https://www.youtube.com/watch?v=FzTjV0O88qM
+    - Uninstalling Node, https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx/
+    - `php composer require laravel/ui` will install bootstrap too
+    - `php artisan ui vue --auth`
+    - `npm install` and `npm run dev`, maybe `npm audit fix` if ERR occured
+
+
+## Models / Migrations 

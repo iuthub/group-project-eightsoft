@@ -33,3 +33,7 @@ Route::get ('/users/{id}', function ($id) {
     return "This is a user " . $id;
 });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
