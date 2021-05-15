@@ -17,10 +17,6 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/', 'App\Http\Controllers\PagesController@index');
-Route::get('/about', 'App\Http\Controllers\PagesController@about');
-Route::get('/services', 'App\Http\Controllers\PagesController@services');
-
 //Route::get ('/hello', function () {
 //    return "<h1>Hello World</h1>";
 //});
@@ -34,6 +30,12 @@ Route::get('/services', 'App\Http\Controllers\PagesController@services');
 //});
 
 
+Route::get('/', 'App\Http\Controllers\PagesController@index');
+Route::get('/about', 'App\Http\Controllers\PagesController@about');
+Route::get('/services', 'App\Http\Controllers\PagesController@services');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('posts', 'App\Http\Controllers\PostsController');

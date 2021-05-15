@@ -13,7 +13,8 @@
 - `php artisan make:controller NewCotroller`
 - `php artisan make:model NewModel -m`
 - `php artisan migrate`
-- `php artisan tinker`
+- `php artisan tinker` // to use DB from terminal
+- `php artisan route:list`
 
 ## References
 - https://stackoverflow.com/questions/44839648/no-application-encryption-key-has-been-specified
@@ -52,6 +53,7 @@
 ## Controllers
 - **app/Http/Controllers** 
 - `php artisan make:controller MyController`
+- `php artisan make:controller MyController --resource `
 - Any controller should extend the **Controller** class, inside our class we can create methods
 - **index** method returns the html template which is **resources/views/pages/index.blade.php**
     ```php
@@ -137,5 +139,21 @@
 - `php artisan config:clear`, `php artisan migrate:install`
 - Ughh progress, new type of error:
 ```
-  SQLSTATE[HY000] [2002] Connection refused (SQL: create table `migrations` (`id` int unsigned not null auto_increment primary key, `migration` varchar(191) not null, `batch` int not null) default character set utf8 collate 'utf8_unicode_ci')
+  SQLSTATE[HY000] [2002] Connection refused (SQL: create table `migrations` (`id` int unsigned not null auto_increment primary key, `migration` varchar(191) not null, `batch` int not null) default character set utf8 collate 'utf8_unicode_ci') 
 ```
+- Ok that's shit not working
+
+- `php artisan tinker`, you can directly work with models and database
+```php 
+>>> App\Post::count()
+>>> $post = new App\Post; // instanse of our post model
+>>> $post->title = 'Post One`;
+>>> $post->body = `This is the post body`;
+>>> $post->save();
+
+```
+
+
+## TODO for others
+- Go and create `eightsoft` called database inside your PhpAdmin
+- `php artisan migrate`
