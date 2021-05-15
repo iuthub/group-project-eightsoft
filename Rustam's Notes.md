@@ -7,6 +7,14 @@
 - `php artisan key:generate`
 - `php artisan config:cache`
 
+## Important commands
+- `php artisan list`
+- `php artisan help migrate`
+- `php artisan make:controller NewCotroller`
+- `php artisan make:model NewModel -m`
+- `php artisan migrate`
+- `php artisan tinker`
+
 ## References
 - https://stackoverflow.com/questions/44839648/no-application-encryption-key-has-been-specified
 - `rm -rf .git` remove .git folder
@@ -104,6 +112,30 @@
     - `php composer require laravel/ui` will install bootstrap too
     - `php artisan ui vue --auth`
     - `npm install` and `npm run dev`, maybe `npm audit fix` if ERR occured
-
-
-## Models / Migrations 
+    
+## Models / DB Migrations 
+- Create MySQL database in PhpAdmin, called **eightsoft**
+- `php artisan make:controller NewController`
+- `php artisan make:model Post -m`, this will create a migration in **database/migrations**
+- In the **up()** function you need to define your columns of table
+    ```php
+    public function up()
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->mediumText('body');
+            $table->dateTime('created_time');
+            $table->timestamps();
+        });
+    }
+    ```
+- Then type `php artisan migrate` to apply the changes in database
+- ERROR time, here we go:
+- https://stackoverflow.com/questions/51249164/php-artisan-migrate-error-illuminate-database-queryexception-sqlstatehy00
+- Now changing **config/database.php**
+- `php artisan config:clear`, `php artisan migrate:install`
+- Ughh progress, new type of error:
+```
+  SQLSTATE[HY000] [2002] Connection refused (SQL: create table `migrations` (`id` int unsigned not null auto_increment primary key, `migration` varchar(191) not null, `batch` int not null) default character set utf8 collate 'utf8_unicode_ci')
+```
