@@ -152,10 +152,10 @@
 >>> $post->save();
 ```
 
-
 ## TODO for others
 - Go and create `eightsoft` called database inside your PhpAdmin
 - [Authentication instructions](#Authentication-/-Authorization)
 - `php artisan migrate`
 - https://laravelcollective.com/docs/6.x/html
   `composer require laravelcollective/html`
+  
