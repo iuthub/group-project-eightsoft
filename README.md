@@ -36,3 +36,5 @@ You have to submit your project into this repository before 23.05.2021 (midnight
 - MySQL error fixed, Posts - Create, Validation, Save:   <br><img src="screenshots/Posts.jpg"><img src="screenshots/Test_Validation.jpg"><img src="screenshots/Saved_Posts.jpg">
 - Post edit function added: <br><img src="screenshots/Edit_Post.jpg"><img src="screenshots/Post_Edited.jpg">
 - Post delete function added: <br><img src="screenshots/Post_Deleted.jpg">
+- Authentication added: <br><img src="screenshots/Registration.jpg"><img src="screenshots/User.jpg"><img src="screenshots/Login.jpg">
+- Connecting user's posts with user's account: <br><img src="screenshots/IDs.jpg"> <img src="screenshots/blogs.jpg">

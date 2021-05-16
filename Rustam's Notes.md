@@ -159,3 +159,8 @@
 - https://laravelcollective.com/docs/6.x/html
   `php composer.phar require laravelcollective/html`
   
+- `php artisan make:migration add_user_id_to_posts`
+- `php artisan migrate` 
+
+
+  
