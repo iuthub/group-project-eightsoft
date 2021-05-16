@@ -5,7 +5,7 @@
 
     {{--    https://laravelcollective.com/docs/6.x/html--}}
 
-    {!! Form::open(['url' => 'PostsController@store', 'method' => 'POST']) !!}
+    {!! Form::open(['action' => 'App\Http\Controllers\PostsController@store', 'method' => 'POST']) !!}
     <div class="form-group">
         {{Form::label('title', 'Title')}}
         {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
