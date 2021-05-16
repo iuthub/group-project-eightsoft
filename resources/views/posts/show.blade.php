@@ -8,6 +8,11 @@
 
     <p> {{$post->body}} </p>
 
-    <a href="/posts/{{$post->id}}/edit" class="btn btn-group">Edit</a>
+    <a href="/posts/{{$post->id}}/edit" class="btn">Edit</a>
+
+    {!! Form::open(['action' => ['App\Http\Controllers\PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right']) !!}
+    {{Form::hidden('_method', 'DELETE')}}
+    {{Form::submit('Delete', ['class' => 'btn' ])}}
+    {!! Form::close() !!}
 
 @endsection

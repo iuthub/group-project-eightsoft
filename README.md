@@ -35,3 +35,4 @@ You have to submit your project into this repository before 23.05.2021 (midnight
 - So, here we go, the first problem, MySQL server is not working, MAMP crashed, `php artisan migrate` giving error.
 - MySQL error fixed, Posts - Create, Validation, Save:   <br><img src="screenshots/Posts.jpg"><img src="screenshots/Test_Validation.jpg"><img src="screenshots/Saved_Posts.jpg">-
 - Post edit function added:   <br><img src="screenshots/Edit_Post.jpg"><img src="screenshots/Post_Edited.jpg">-
+- Post delete function added:   <br><img src="screenshots/Post_Deleted.jpg">-
