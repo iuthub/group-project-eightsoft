@@ -33,3 +33,5 @@ You have to submit your project into this repository before 23.05.2021 (midnight
 - Create the routing, controller, and basic view <br><img src="screenshots/2.png"><img src="screenshots/3.png"><img src="screenshots/4.png">
 - Authentication & Authorization setting <br><img src="screenshots/5.png"><img src="screenshots/6.png"><img src="screenshots/7.png">
 - So, here we go, the first problem, MySQL server is not working, MAMP crashed, `php artisan migrate` giving error.
+
+- MySQL error fixed, Posts - Create, Validation, Save:   <br><img src="screenshots/Posts.jpg"><img src="screenshots/Test_Validation.jpg"><img src="screenshots/Saved_Posts.jpg">-

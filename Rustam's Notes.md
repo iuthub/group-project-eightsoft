@@ -108,10 +108,10 @@
 - npm run dev
 - php artisan migrate
 
-- Second way
+- Second way (working)
     - Installing Node and NPM on M1, https://www.youtube.com/watch?v=FzTjV0O88qM
     - Uninstalling Node, https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx/
-    - `php composer require laravel/ui` will install bootstrap too
+    - `php composer.phar require laravel/ui` will install bootstrap too
     - `php artisan ui vue --auth`
     - `npm install` and `npm run dev`, maybe `npm audit fix` if ERR occured
     
@@ -157,5 +157,5 @@
 - [Authentication instructions](#Authentication-/-Authorization)
 - `php artisan migrate`
 - https://laravelcollective.com/docs/6.x/html
-  `composer require laravelcollective/html`
+  `php composer.phar require laravelcollective/html`
   
