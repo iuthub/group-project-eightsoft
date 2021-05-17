@@ -3,6 +3,11 @@
 @section('content')
     <a href="/posts" class="btn btn-block">Go back</a>
     <h1> {{$post->title}} </h1>
+    <div class="row">
+        <div class="col-md-12">
+            <img style="width: 100%;" src="/storage/cover_image/{{$post->cover_image}}" alt="">
+        </div>
+    </div>
     <small> Created • {{$post->created_at}} </small>
     <hr>
 
