@@ -168,3 +168,5 @@
  - `php artisan storage:link`
  - Upload any image with `noimage.jpg` filiname into **storage/app/public/cover_images**
 
+- https://stackoverflow.com/questions/33988896/where-to-put-css-file-in-laravel-project
+- Override CSS https://stackoverflow.com/questions/40953996/laravel-makeauth-css-stylesheet/55648693
