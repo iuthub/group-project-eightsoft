@@ -166,3 +166,5 @@
  ## TODO after Vladimir and Irina changes
  - `php artisan migrate` 
  - `php artisan storage:link`
+ - Upload any image with `noimage.jpg` filiname into **storage/app/public/cover_images**
+
