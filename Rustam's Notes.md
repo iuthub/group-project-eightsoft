@@ -163,4 +163,6 @@
 - `php artisan migrate` 
 
 
-  
+ ## TODO after Vladimir and Irina changes
+ - `php artisan migrate` 
+ - `php artisan storage:link`
