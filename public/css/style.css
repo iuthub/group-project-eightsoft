@@ -48,7 +48,7 @@ img {
 }
 .container {
     padding: 0.01em 16px;
-    margin: 20px 175px;
+    margin: 20px 350px;
 }
 .author {
     color: #07375f;
@@ -175,7 +175,7 @@ input[type=submit]:hover {
 .site-footer
 {
     background-color:#151f47;
-    padding:25px 175px 20px;
+    padding:25px 0 20px;
     font-size:15px;
     line-height:24px;
     color:#737373;

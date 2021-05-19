@@ -3,13 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use Illuminate\Support\Facades;
 
 class PagesController extends Controller
 {
-    public function index() {
-        $title = "Welcome to our blog!";
-        return view('pages.index')->with('title', $title);
+    public function index()
+
+    {
+
+        // $posts = Post::all();
+
+        // $posts = DB::select('SELECT * FROM posts');
+
+        $posts =  Post::orderBy('title', 'desc')->get();
+
+        return view('posts.index')->with('posts', $posts);
+
     }
+
 
     public function about() {
         return view('pages.about');
@@ -23,3 +35,5 @@ class PagesController extends Controller
         return view('pages.services')->with($data);
     }
 }
+
+
