@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,21 +15,26 @@
                         </div>
                     @endif
 
-                    <a href="posts/create" class="btn btn-primary"> Create Post </a>
-                    <hr>
-                    <h3> Your Blog Posts </h3>
                     @if(count($posts) > 0)
-                        <table class="table table-striped">
-                            <tr>
-                                <th>Title</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
+                            <table style="max-width:600px;margin:auto; padding-bottom: 40px">
+                                <!--<tr>
+                                    <td colspan="2">Dashboard</td>
+                                </tr>-->
+                                <tr>
+                                    <th colspan="2"><h2>Your Blog Post</h2></th>
+                                </tr>
+
+                                <tr>
+                                    <th colspan="2"> <a href="posts/create"><input type="submit" value="Create Post"></a></th>
+                                </tr>
+
+                                <tr>
+                                    <th colspan="2">Title</th>
+                                </tr>
                             @foreach($posts as $post)
                                 <tr>
-                                    <th>{{$post->title}}</th>
-                                    <th><a href="/posts/{{$post->id}}/edit" class="btn btn-default"> Edit </a></th>
-                                    <th></th>
+                                    <th><a href="/posts/{{$post->id}}"> {{$post->title}} </a></th>
+                                    <td><a href="/posts/{{$post->id}}/edit" > Edit </a></td>
                                 </tr>
                             @endforeach
                         </table>

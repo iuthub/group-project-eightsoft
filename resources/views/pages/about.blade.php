@@ -15,28 +15,21 @@
             <img src="/storage/cover_image/Alimov.jpg" alt="Avatar" style="width:100%">
             <div class="card-container">
                 <h4><b>Abdullokh Alimov</b></h4>
-                <p>Back-end Developer</p>
+                <p>Fullstack Developer</p>
             </div>
         </div>
         <div class="stuff column">
             <img src="/storage/cover_image/Rustam.jpg" alt="Avatar" style="width:100%">
             <div class="card-container">
                 <h4><b>Rustam Zokirov</b></h4>
-                <p>Back-end Developer</p>
+                <p>Backend Developer</p>
             </div>
         </div>
         <div class="stuff column">
             <img src="/storage/cover_image/Javokhir.jpg" alt="Avatar" style="width:100%">
             <div class="card-container">
                 <h4><b>Javokhir Isroilov </b></h4>
-                <p>Front-end Developer</p>
-            </div>
-        </div>
-        <div class="stuff column">
-            <img src="/storage/cover_image/avatar.jpg" alt="Avatar" style="width:100%">
-            <div class="card-container">
-                <h4><b>Azamat Tokhirov</b></h4>
-                <p>Front-end Developer</p>
+                <p>Frontend Developer</p>
             </div>
         </div>
         <div class="stuff column">
@@ -50,7 +43,14 @@
             <img src="/storage/cover_image/avatar.jpg" alt="Avatar" style="width:100%">
             <div class="card-container">
                 <h4><b>Vladimir Khvan</b></h4>
-                <p> Back-end Developer </p>
+                <p> Backend Developer </p>
+            </div>
+        </div>
+        <div class="stuff column">
+            <img src="/storage/cover_image/avatar.jpg" alt="Avatar" style="width:100%">
+            <div class="card-container">
+                <h4><b>Azamat Tokhirov</b></h4>
+                <p>Frontend Developer</p>
             </div>
         </div>
     </div>

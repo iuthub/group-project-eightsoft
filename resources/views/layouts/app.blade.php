@@ -15,6 +15,9 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googlea pis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{url('admin/css/all.min.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -25,8 +28,7 @@
 <div class="header">
     <a href="{{ url('/') }}" class="logo">EightSoft Blog</a>
     <div class="header-right">
-        <a class="active" href="/home">Home</a>
-        <a href="#contact">Dashboard</a>
+        <a class="active" href="/home">Dashboard</a>
         <a href="/about">About</a>
         <a href="/posts">Blog</a>
 {{--        <a href="#contact">Register</a>--}}

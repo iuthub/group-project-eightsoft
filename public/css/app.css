@@ -356,3 +356,13 @@ tr:nth-child(even) {
         float: none;
     }
 }
+
+a {
+    color:#00428e;
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
