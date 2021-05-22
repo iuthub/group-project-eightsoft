@@ -1,5 +1,10 @@
 # Internet Programming: Design Project Assignment
+First front-end design
 
-Find `ip_design_project.pdf` file in this folder, and refer to all the instructions given there. 
-
-You have to submit your project into this repository before 06.05.2018.
+# Pictures
+<img src="images/3.png" width=500>
+<img src="images/4.png" width=500>
+<img src="images/5.png" width=500>
+<img src="images/6.png" width=500>
+<img src="images/7.png" width=500>
+<img src="images/8.png" width=500>
