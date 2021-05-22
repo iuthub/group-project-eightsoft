@@ -17,9 +17,9 @@
 - Rustam Zokirov U1910049, Section 002
 - Abdullokh Alimov U1910060, Section 002
 - Vladimir Khvan U1910046, Section 001
-- Irina Em U19100128, Section 00x
-- Javokhir Isroilov U1910050, Section 00x
-- Azamat Tokhirov U1910070, Section 00x
+- Irina Em U1910128, Section 003
+- Javokhir Isroilov U1910050, Section 002
+- Azamat Tokhirov U1910070, Section 002
 
 ## Project business logic
 - Anyone can log in / register
