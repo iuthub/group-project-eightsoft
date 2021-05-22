@@ -9,7 +9,6 @@ use Illuminate\Support\Facades;
 class PagesController extends Controller
 {
     public function index()
-
     {
 
         // $posts = Post::all();
@@ -18,15 +17,16 @@ class PagesController extends Controller
 
         $posts =  Post::orderBy('title', 'desc')->get();
 
-        return view('posts.index')->with('posts', $posts);
+        return view('pages.index')->with('posts', $posts);
 
     }
 
 
-    public function about() {
-        return view('pages.about');
+    public function contacts() {
+        return view('pages.contacts');
     }
 
+    /*
     public function services() {
         $data = array(
             'title' => 'Services',
@@ -34,6 +34,7 @@ class PagesController extends Controller
         );
         return view('pages.services')->with($data);
     }
+    */
 }
 
 

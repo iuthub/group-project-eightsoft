@@ -17,34 +17,17 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-//Route::get ('/hello', function () {
-//    return "<h1>Hello World</h1>";
-//});
-
 //Route::get ('/about', function () {
 //    return view('pages.about');
 //});
 
-//Route::get ('/users/{id}', function ($id) {
-//    return "This is a user " . $id;
-//});
-
-
 Route::get('/', 'App\Http\Controllers\PagesController@index');
-Route::get('/contacts', 'App\Http\Controllers\PagesController@about');
-Route::get('/services', 'App\Http\Controllers\PagesController@services');
+Route::get('/home', 'App\Http\Controllers\PagesController@index');
+Route::get('/contacts', 'App\Http\Controllers\PagesController@contacts');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('posts', 'App\Http\Controllers\PostsController');
-Route::post('posts',\App\Http\Controllers\PostsController::class . '@store');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('blog', 'App\Http\Controllers\PostsController');
+Route::post('blog',\App\Http\Controllers\PostsController::class . '@store');

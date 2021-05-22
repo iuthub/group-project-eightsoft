@@ -30,7 +30,7 @@
         </div>
 
         <div>
-            <input class="input-field @error('email') is-invalid @enderror" type = "text" value="{{ old('email') }}" required autocomplete="email" placeholder="Email" maxlength = "20">
+            <input class="input-field @error('email') is-invalid @enderror" type = "text" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email" maxlength = "25">
             @error('email')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

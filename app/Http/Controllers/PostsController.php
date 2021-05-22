@@ -69,7 +69,7 @@ class PostsController extends Controller
             //upload image
             $path = $request->file('cover_image')->storeAs('public/cover_image', $fileNameToStore);
         }else{
-            $fileNameToStore = 'noimage,jpeg';
+            $fileNameToStore = 'noimage.jpeg';
         }
 
         $post = new Post;
@@ -79,7 +79,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post created successfully!');
+        return redirect('/blog')->with('success', 'Post created successfully!');
     }
 
     /**
@@ -105,7 +105,7 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         if(auth()->user()->id !== $post->user_id){
-            return redirect('/posts')->with('error', 'Unauthorized page');
+            return redirect('/blog')->with('error', 'Unauthorized page');
         }
         return view('posts.edit')->with('post', $post);
     }
@@ -147,7 +147,7 @@ class PostsController extends Controller
         }
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post edited successfully!');
+        return redirect('/blog')->with('success', 'Post edited successfully!');
     }
 
     /**
@@ -161,7 +161,7 @@ class PostsController extends Controller
         $post = Post::find($id);
 
         if(auth()->user()->id !== $post->user_id){
-            return redirect('/posts')->with('error', 'Unauthorized page');
+            return redirect('/blog')->with('error', 'Unauthorized page');
         }
 
         //if($post->cover_image != 'noimage.jpg'){
@@ -169,6 +169,6 @@ class PostsController extends Controller
         //}
 
         $post->delete();
-        return redirect('/posts')->with('success', 'Post deleted successfully!');
+        return redirect('/blog')->with('success', 'Post deleted successfully!');
     }
 }

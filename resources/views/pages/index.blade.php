@@ -32,11 +32,11 @@
                                     <div class="thumbnail">
                                         <img src="/storage/cover_image/{{$post->cover_image}}" alt="Title">
                                         <div class="caption">
-                                            <h3><a href="/posts/{{$post->id}}"> {{$post->title}} </a></h3>
-                                            <p> Description</p>
+                                            <h3><a href="/blog/{{$post->id}}"> {{$post->title}} </a></h3>
+                                            <p>Description</p>
                                             <p><a href="#" class="btn btn-primary" role="button">Like</a>
                                                 <a href="#" class="btn btn-primary" role="button">Comment</a>
-                                                <a href="/posts/{{$post->id}}" class="btn btn-primary" role="button">Read more</a>
+                                                <a href="/blog/{{$post->id}}" class="btn btn-primary" role="button">Read more</a>
                                             </p>
                                         </div>
                                     </div>

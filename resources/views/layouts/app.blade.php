@@ -9,26 +9,20 @@
     <meta name="author" content="Eightsoft">
     <meta name = "description" content = "All about the AI"/>
 
-    <title>Home - Eightsoft blog</title>
+    <title>Eightsoft blog</title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-
     <!-- Scripts -->
-{{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
+    {{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -53,7 +47,7 @@
                     <div class="col-lg-12">
                         <div class="container">
                             <div class="row">
-                                <h1><a href="{{ url('/') }}">Eightsoft</a></h1>
+                                <h1><a href="{{ url('/home') }}">Eightsoft</a></h1>
                                 <p><a href="#">All about AI</a></p>
                             </div>
                         </div>
@@ -72,9 +66,9 @@
                 <div class="col-lg-8">
                     <div id="navbarCollapse"class="collapse navbar-collapse">
                         <ul class="nav nav-pills nav-justified">
-                            <li role="presentation" class="active"><a href="">Home</a></li>
-                            <li role="presentation"><a href="/posts">Blog</a></li>
-                            <li role="presentation"><a href="/home">Dashboard</a></li>
+                            <li role="presentation" class="active"><a href="/home">Home</a></li>
+                            <li role="presentation"><a href="/blog">Blog</a></li>
+                            <li role="presentation"><a href="/dashboard">Dashboard</a></li>
                             <li role="presentation"><a href="/contacts">Contacts</a></li>
 
                             <!-- Authentication Links -->
@@ -129,7 +123,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-
 
 </body>
 </html>
