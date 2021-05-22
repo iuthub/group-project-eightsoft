@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'App\Http\Controllers\PagesController@index');
-Route::get('/about', 'App\Http\Controllers\PagesController@about');
+Route::get('/contacts', 'App\Http\Controllers\PagesController@about');
 Route::get('/services', 'App\Http\Controllers\PagesController@services');
 
 Auth::routes();

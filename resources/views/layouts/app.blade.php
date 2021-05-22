@@ -1,16 +1,34 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "Content-Type" content = "text/html"; charset = "utf-8"/>
+    <meta name="author" content="Eightsoft">
+    <meta name = "description" content = "All about the AI"/>
+
+    <title>Home - Eightsoft blog</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Eightsoft Blog</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+{{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -25,39 +43,71 @@
 <body>
 
 
-<div class="header">
-    <a href="{{ url('/') }}" class="logo">EightSoft Blog</a>
-    <div class="header-right">
-        <a class="active" href="/home">Dashboard</a>
-        <a href="/about">About</a>
-        <a href="/posts">Blog</a>
-{{--        <a href="#contact">Register</a>--}}
-{{--        <a href="#about">Login</a>--}}
-        <!-- Authentication Links -->
-        @guest
-            @if (Route::has('login'))
-                <a href="{{ route('login') }}">{{ __('Login') }}</a>
-            @endif
+<!-- Navigation bar (header) -->
+<div class="container-fluid">
+    <div class="row">
+        <nav role="navigation" class="navbar navbar-inverse">
+            <div class="container">
+                <!-- Logo (name) -->
+                <div class="navbar-header header">
+                    <div class="col-lg-12">
+                        <div class="container">
+                            <div class="row">
+                                <h1><a href="{{ url('/') }}">Eightsoft</a></h1>
+                                <p><a href="#">All about AI</a></p>
+                            </div>
+                        </div>
+                    </div>
 
-            @if (Route::has('register'))
-                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
-            @endif
-        @else
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-        @endguest
 
+                <!-- Navigation buttons -->
+                <div class="col-lg-4"></div>
+                <div class="col-lg-8">
+                    <div id="navbarCollapse"class="collapse navbar-collapse">
+                        <ul class="nav nav-pills nav-justified">
+                            <li role="presentation" class="active"><a href="">Home</a></li>
+                            <li role="presentation"><a href="/posts">Blog</a></li>
+                            <li role="presentation"><a href="/home">Dashboard</a></li>
+                            <li role="presentation"><a href="/contacts">Contacts</a></li>
+
+                            <!-- Authentication Links -->
+                            @guest
+                                @if (Route::has('login'))
+                                    <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                                @endif
+
+                                @if (Route::has('register'))
+                                    <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {{ Auth::user()->name }}
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
 </div>
 
@@ -66,40 +116,20 @@
         @yield('content')
     </main>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div>
-                <h6>About</h6>
-                <p class="text-justify"><i>EightSoft BLOG</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    In risus nibh, sodales eu ultrices vel, gravida in lacus. Vivamus non venenatis mi. Fusce bibendum
-                    scelerisque dui, eu condimentum quam efficitur fermentum. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Sed venenatis viverra laoreet. Curabitur non
-                    efficitur tortor. Praesent lacinia ante elit, a consectetur ante tempor id. Quisque magna est,
-                    iaculis quis egestas quis, condimentum non libero.</p>
-            </div>
 
-            <div>
-                <h6>Contacts</h6>
-                <ul class="footer-links">
-                    <li><a href="http://scanfcode.com/category/front-end-development/">Tashkent, Uzbekistan</a></li>
-                    <li><a href="http://scanfcode.com/category/back-end-development/">+99897 777-77-77</a></li>
-                    <li><a href="http://scanfcode.com/category/java-programming-language/">eightsoft@info.com</a></li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <p class="copyright-text">Copyright &copy; Blog by
-                    <a href="#">EightSoft</a>.
-                </p>
-            </div>
-        </div>
+<!-- Footer -->
+<footer>
+    <div class="container-fluid">
+        <p class = "text-center"><a href="inha.uz">Inha University Internet Programming 2021 Project</a></p>
     </div>
 </footer>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
 
 </body>
 </html>

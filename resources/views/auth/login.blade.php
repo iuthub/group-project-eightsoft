@@ -1,35 +1,48 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
 
-@section('content')
+<head>
+    <title>Login - Eightsoft blog</title>
 
-<div class="container" style="padding: 50px 0 100px 20px" >
-    <div id="box">
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+    <meta name = "description" content = "Useful links to spend time toghether"/>
+    <meta http-equiv = "Content-Type" content = "text/html"; charset = "utf-8"/>
+    <meta name = "viewpoint" content = "width = device-width, initial-scale = 1.0"/>
+    <meta name="author" content="Eightsoft">
 
-            <h2>Log in to your Account</h2>
-            <div class="input-container">
-                <i class="fa fa-user icon"></i>
-                <input class="input-field  @error('email') is-invalid @enderror" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
-                @error('email')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-            <div class="input-container">
-                <i class="fa fa-key icon"></i>
-                <input class="input-field @error('password') is-invalid @enderror" type="password" name="password" required autocomplete="current-password" placeholder="Password">
+    <link rel = "stylesheet" href="{{url('css/loginStyle.css')}}">
 
-                @error('password')
+</head>
+
+<body class = "color-change-2x">
+
+<div id = "box">
+    <form method="POST" action="{{ route('login') }}">
+        @csrf
+
+        <h1>LOGIN</h1>
+        <div>
+            <input class="input-field  @error('email') is-invalid @enderror" type = "text" name="email" value="{{ old('email') }}" placeholder="Email" maxlength = "20">
+            @error('email')
                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                @enderror
-            </div>
-            <button type="submit" class="btn">Login</button>
-        </form>
-    </div>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
+        <div>
+            <input class="input-field @error('password') is-invalid @enderror" type="password" name="password" required autocomplete="current-password" placeholder="Password" maxlength = "20">
+            @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
+        <input type = "submit" name = "submit" value = "Login">
+
+    </form>
+    <p><a href="{{ route('register') }}">Register</a> <a href="{{ url('/') }}">Home</a></p>
 </div>
 
-@endsection
+</body>
+</html>
