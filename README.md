@@ -8,27 +8,49 @@
 </p>
 
 [![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=402169&assignment_repo_type=GroupAssignmentRepo)
-# Internet Programming: Group Project Assignment
 
-Find `ip_group_project.pdf` file in this folder, and refer to all the instructions given there.
+# Internet Programming: Group Project Assignment, Blog Application
 
-You have to submit your project into this repository before 23.05.2021 (midnight).
+> Deadline: 23.05.2021 (midnight).
 
-[comment]: <> (## Portfolio website)
+## Eightsoft team
+- Rustam Zokirov U1910049, Section 002
+- Abdullokh Alimov U1910060, Section 002
+- Vladimir Khvan U1910046, Section 001
+- Irina Em U19100128, Section 00x
+- Javokhir Isroilov U1910050, Section 00x
+- Azamat Tokhirov U1910070, Section 00x
 
-[comment]: <> (`HTML` `CSS` `PHP` `LARAVEl` `MySQL`)
+## Project business logic
+- Anyone can log in / register
+- Users can be 'admin', 'author', or 'subscribers'
+- Authors can write / update / delete their own posts
+- Authors can use tagging on their posts
+- Authors have dashboard system
+- Admin can approve message pin request on the home page
+- Admin has full access to the website and can read / write / update/ delete any of the posts (Need to be thought!)
+- Anyone can read these posts
+- Users can comment on the posts (only after login)
+- Users can use search system (by author, by topic tag, by date)
 
-[comment]: <> (- Pages)
+## UML diagram
+<img src = "screenshots/UML.png">
 
-[comment]: <> (    - Landing page, should include )
+## Front-end design
+- Home page `index.html` <br><img src = "screenshots/front-end/1.png">
+- Home page continuation <br><img src = "screenshots/front-end/2.png">
+- Blog page <br><img src = "screenshots/front-end/3.png">
+- View post page <br><img src = "screenshots/front-end/9.png">
+- View post & comments <br><img src = "screenshots/front-end/10.png">
+- Create post page <br><img src = "screenshots/front-end/5.png">
+- Contacts page <br><img src = "screenshots/front-end/6.png">
+- Login page <br><img src = "screenshots/front-end/7.png">
+- Registration page <br><img src = "screenshots/front-end/8.png">
 
-[comment]: <> (    - Projects page,)
+## Front-end responsive design demo
+<img src = "screenshots/front-end/11.png" width=500><img src = "screenshots/front-end/13.png" width=500><img src = "screenshots/front-end/14.png" width=500><img src = "screenshots/front-end/15.png" width=500><img src = "screenshots/front-end/16.png" width=500><img src = "screenshots/front-end/17.png" width=500><img src = "screenshots/front-end/18.png" width=500>
 
-[comment]: <> (    - Registration & "Sign In" pages)
-
-[comment]: <> (    - Blog post page)
-
-# Checkpoints
+## Checkpoints (The process of development)
 - Create Laravel project <br><img src="screenshots/1.png">
 - Create the routing, controller, and basic view <br><img src="screenshots/2.png"><img src="screenshots/3.png"><img src="screenshots/4.png">
 - Authentication & Authorization setting <br><img src="screenshots/5.png"><img src="screenshots/6.png"><img src="screenshots/7.png">
