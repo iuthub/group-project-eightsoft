@@ -34,7 +34,7 @@
 
                     <div class="margin-8"></div>
 
-                    <h2>Comments</h2>
+                    <h2 id="comments">Comments</h2>
                     <hr>
 
 

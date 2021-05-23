@@ -37,7 +37,7 @@
                                             <h3><a href="/blog/{{$post->id}}"> {{$post->title}} </a></h3>
                                             <p>{{$post->description}}</p>
                                             <p><a href="#" class="btn btn-primary" role="button">Like</a>
-                                                <a href="#" class="btn btn-primary" role="button">Comment</a>
+                                                <a href="/blog/{{$post->id}}#comments" class="btn btn-primary" role="button">Comment</a>
                                                 <a href="/blog/{{$post->id}}" class="btn btn-primary" role="button">Read more</a>
                                             </p>
                                         </div>
@@ -63,7 +63,7 @@
                         expand our understanding of data science. While we allow
                         authors to publish articles,
                         we do not endorse each author’s contribution.</p>
-                    <a class="btn btn-primary btn-lg" href="blog.html" role="button">Learn more</a>
+                    <a class="btn btn-primary btn-lg" href="/blog" role="button">Learn more</a>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
                                 expand our understanding of data science. While we allow
                                 authors to publish articles,
                                 we do not endorse each author’s contribution.</p>
-                            <a class="btn btn-primary btn-lg" href="dashboard.html" role="button">Learn more</a>
+                            <a class="btn btn-primary btn-lg" href="/dashboard" role="button">Learn more</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                                 expand our understanding of data science. While we allow
                                 authors to publish articles,
                                 we do not endorse each author’s contribution.</p>
-                            <a class="btn btn-primary btn-lg" href="contact.html" role="button">Learn more</a>
+                            <a class="btn btn-primary btn-lg" href="/contacts" role="button">Learn more</a>
                         </div>
                     </div>
                 </div>
