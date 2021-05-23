@@ -47,8 +47,8 @@
                     <div class="col-lg-12">
                         <div class="container">
                             <div class="row">
-                                <h1><a href="{{ url('/home') }}">Eightsoft</a></h1>
-                                <p><a href="#">All about AI</a></p>
+                                <h1><a href="{{ url('/home') }}">Eightsoft AI</a></h1>
+                                <p><a href="#">Sharing concepts, ideas and codes</a></p>
                             </div>
                         </div>
                     </div>
@@ -105,19 +105,19 @@
     </div>
 </div>
 
-    <main class="py-4 container">
-        @include('inc.messages')
-        @yield('content')
-    </main>
+
+<main class="py-4 container">
+    @include('inc.messages')
+    @yield('content')
+</main>
 
 
 <!-- Footer -->
 <footer>
     <div class="container-fluid">
-        <p class = "text-center"><a href="inha.uz">Inha University Internet Programming 2021 Project</a></p>
+        <p class="text-center"><a href="https://inha.uz">Inha University Internet Programming 2021 Project</a></p>
     </div>
 </footer>
-
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
