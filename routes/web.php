@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,7 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 
 Route::resource('blog', 'App\Http\Controllers\PostsController');
 Route::post('blog',\App\Http\Controllers\PostsController::class . '@store');
+
+
+Route::resource('comments', '\App\Http\Controllers\CommentsController');
+Route::post('comments',\App\Http\Controllers\CommentsController::class . '@store');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Comments;
 use Illuminate\Support\Facades;
 
 class PostsController extends Controller
@@ -90,9 +91,11 @@ class PostsController extends Controller
      */
     public function show($id)
     {
+        $comments = Comments::all();
         $post = Post::find($id);
 
-        return view('posts.show')->with('post', $post);
+        // return view('posts.show')->with('post', $post);
+        return view('posts.show',['post'=> $post,'comments'=>$comments]);
     }
 
     /**

@@ -37,33 +37,44 @@
                     <h2>Comments</h2>
                     <hr>
 
-                    <form action="">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your name" class="form-control input-lg">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Max 250 characters"></textarea>
-                        </div>
-                        <div class="submitButton">
-                            <button class = "btn-lg btn-warning">Submit</button>
-                        </div>
-                    </form>
 
+                    {!! Form::open(['action' => 'App\Http\Controllers\CommentsController@store', 'method' => 'POST']) !!}
+                    <div class="form-group">
+                        {{Form::text('name', '', ['class' => 'form-control input-lg', 'placeholder' => 'Your name'])}}
+                    </div>
+                    <div class="form-group">
+                        {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Body'])}}
+                    </div>
+                    <input type="hidden" name="postid" value="{{ $post->id }}" />
+                    <div class="form-group">
+                        <div class="submitButton">
+                            {{Form::submit('Submit', ['class' => 'btn-lg pull-right btn-warning'])}}
+                        </div>
+                        {!! Form::close() !!}
+                    </div>
+                    <br><br>
                     <hr>
 
-                    <div class="panel panel-info">
-                        <div class="panel-heading"><i class= "glyphicon glyphicon-user"></i><span>Rustam</span></div>
-                        <div class="panel-body">
-                            Super!
-                        </div>
-                    </div>
+                    @if(count($comments) > 0)
+                        @foreach($comments as $comment)
+                            <?php
+                            if ($post->id == $comment->post_id){
+                                ?>
+                            <div class="panel panel-info">
+                                <div class="panel-heading"><i class= "glyphicon glyphicon-user"></i><span>{{$comment->name}}</span></div>
+                                <div class="panel-body">
+                                    {{$comment->body}}
+                                </div>
+                            </div>
 
-                    <div class="panel panel-info">
-                        <div class="panel-heading"><i class= "glyphicon glyphicon-user"></i><span>Vladimir</span></div>
-                        <div class="panel-body">
-                            Wow that's very informative
-                        </div>
-                    </div>
+                            <?php
+                            }
+                            ?>
+
+                        @endforeach
+                    @endif
+
+
                 </div></div>
         </div>
         <div class="clear"></div>
