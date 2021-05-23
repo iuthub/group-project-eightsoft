@@ -10,7 +10,8 @@
 [![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=402169&assignment_repo_type=GroupAssignmentRepo)
 
 # Internet Programming: Group Project Assignment, Blog Application
-
+> Checkout deployed site: http://eightsoft-ai.herokuapp.com
+> 
 > Deadline: 23.05.2021 (midnight).
 
 ## Eightsoft team
@@ -23,15 +24,13 @@
 
 ## Project business logic
 - Anyone can log in / register
-- Users can be 'admin', 'author', or 'subscribers'
+- Users can comment on the posts
 - Authors can write / update / delete their own posts
-- Authors can use tagging on their posts
+- Anyone can read these posts
 - Authors have dashboard system
 - Admin can approve message pin request on the home page
-<!-- - Admin has full access to the website and can read / write / update / delete any of the posts --> 
-- Anyone can read these posts
-- Users can comment on the posts (only after login)
-- Users can use search system (by author, by topic tag, by date)
+- TODO: Authors can use tagging on their posts
+- TODO: Users can use search system (by author, by topic tag, by date)
 
 ## UML diagram
 <img src = "screenshots/UML.png">
