@@ -35,7 +35,7 @@
                                         <img src="/storage/cover_image/{{$post->cover_image}}" alt="Title">
                                         <div class="caption">
                                             <h3><a href="/blog/{{$post->id}}"> {{$post->title}} </a></h3>
-                                            <p>Description</p>
+                                            <p>{{$post->description}}</p>
                                             <p><a href="#" class="btn btn-primary" role="button">Like</a>
                                                 <a href="#" class="btn btn-primary" role="button">Comment</a>
                                                 <a href="/blog/{{$post->id}}" class="btn btn-primary" role="button">Read more</a>

@@ -10,7 +10,7 @@
                 <div class="col-lg-12 bar">
 
                     <h2>{{$post->title}}</h2>
-                    <h3>All about AI</h3>
+                    <h3>{{$post->description}}</h3>
                     <hr>
 
                     <div class="viewThumbnail">

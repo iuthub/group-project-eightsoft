@@ -14,30 +14,31 @@
                     <div class="col-lg-2 searchBarItem">
                         <select class="form-control form-control-lg">
                             <option value="" selected disabled>Author</option>
-                            <option>Large select</option>
-                            <option>Large select</option>
-                            <option>Large select</option>
-                            <option>Large select</option>
+                            <option>Rustam</option>
+                            <option>Abdullokh</option>
+                            <option>Vladimir</option>
                         </select>
                     </div>
 
                     <div class="col-lg-2 searchBarItem">
                         <select class="form-control form-control-lg">
                             <option value="" selected disabled>Topic tags</option>
-                            <option>Large select</option>
-                            <option>Large select</option>
-                            <option>Large select</option>
-                            <option>Large select</option>
+                            <option>Machine Learning</option>
+                            <option>Deep Learning</option>
+                            <option>Python</option>
+                            <option>MLOps</option>
+                            <option>Big data</option>
+
                         </select>
                     </div>
 
                     <div class="col-lg-2 searchBarItem">
                         <select class="form-control form-control-lg">
                             <option value="" selected disabled>Date</option>
-                            <option>Large select</option>
-                            <option>Large select</option>
-                            <option>Large select</option>
-                            <option>Large select</option>
+                            <option>24 Hours</option>
+                            <option>Last week</option>
+                            <option>Last month</option>
+                            <option>Last year</option>
                         </select>
                     </div>
                     <div class="col-lg-3">
@@ -73,11 +74,11 @@
                         <div class="clear-both-sm"></div><div class="col-sm-2"></div>
 
                         <div class="col-lg-9 col-md-9 col-sm-8 content-bar">
-                            <div class = "h1"><a href="/blog/{{$post->id}}"  class="tracking-in-expand">{{$post->title}}</a></div>
-                            <p>All about AI</p>
+                            <div class = "h1"><a href="/blog/{{$post->id}}" class="tracking-in-expand">{{$post->title}}</a></div>
+                            <p>{{$post->description}}</p>
                             <a href="#" class="btn topicTag no-click" role="button" disabled>Computer vision</a>
                             <a href="#" class="btn topicTag no-click" role="button" disabled>Info</a>
-                            <a href="#" class="btn topicTag no-click" role="button" disabled>Computer vision</a>
+                            <a href="#" class="btn topicTag no-click" role="button" disabled>Object detection</a>
                         </div>
 
                         <div class="margin8"></div>
@@ -100,7 +101,7 @@
 
                         <div class="col-lg-9 col-md-9 col-sm-8 content-bar">
                             <div class = "h1 text-right"><a href="/blog/{{$post->id}}"  class="tracking-in-expand">{{$post->title}}</a></div>
-                            <p class = "text-right">Computer Vision techniques</p>
+                            <p class = "text-right">{{$post->description}}</p>
                         </div>
 
                         <div class="margin8"></div>

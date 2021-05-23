@@ -15,7 +15,7 @@
                         {{Form::text('title', $post->title, ['class' => 'form-control input-lg', 'placeholder' => 'Title'])}}
                     </div>
                     <div class="form-group">
-                        {{Form::text('description', '', ['class' => 'form-control input-lg', 'placeholder' => 'Description'])}}
+                        {{Form::text('description', $post->description, ['class' => 'form-control input-lg', 'placeholder' => 'Description'])}}
                     </div>
 
                     <select name="tags[]" id="tags" class="tagSelect" multiple aria-label="multiple select example">
