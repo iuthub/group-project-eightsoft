@@ -66,7 +66,7 @@
                             <?php
                             $imgName = "ML".$counter;?>
 
-                            <img class="img-responsive" src="{{ asset('img/'.$imgName.'.png') }}" alt="eclass">
+                            <img class="img-responsive" src="{{ asset('img/'.$imgName.'.png') }}" alt="Robot">
 
                         </div>
 
@@ -93,7 +93,7 @@
                         <div class="col-sm-2 col-md-12 col-lg-12"></div>
 
                         <div class="col-lg-3 col-md-3 col-sm-8 img-bar pull-right border-left">
-                            <img class="img-responsive" src="{{ asset('img/'.$imgName.'.png') }}" alt="eclass">
+                            <img class="img-responsive" src="{{ asset('img/'.$imgName.'.png') }}" alt="Robot">
                         </div>
 
                         <div class="clear-both-sm"></div><div class="col-sm-2"></div>

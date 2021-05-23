@@ -27,8 +27,10 @@
                         </div>
 
                         @if(count($posts) > 0)
+
                             @foreach($posts as $post)
                                 <div class="col-sm-6 col-md-4">
+
                                     <div class="thumbnail">
                                         <img src="/storage/cover_image/{{$post->cover_image}}" alt="Title">
                                         <div class="caption">
@@ -42,7 +44,6 @@
                                     </div>
                                 </div>
                             @endforeach
-
                         @else
                         @endif
                     </div>
@@ -102,6 +103,9 @@
             </div>
 
         </div>
+        <div class="clear"></div>
     </div>
+
+
 
 @endsection

@@ -1,6 +1,6 @@
-
 @extends('layouts.app')
 @section('content')
+
 <!-- Content body -->
 <div class="wrapper">
     <div class="container"><div class="row">

@@ -28,7 +28,7 @@
 - Authors can use tagging on their posts
 - Authors have dashboard system
 - Admin can approve message pin request on the home page
-[comment]: <> (- Admin has full access to the website and can read / write / update/ delete any of the posts &#40;Need to be thought!&#41;)
+<!-- - Admin has full access to the website and can read / write / update / delete any of the posts --> 
 - Anyone can read these posts
 - Users can comment on the posts (only after login)
 - Users can use search system (by author, by topic tag, by date)

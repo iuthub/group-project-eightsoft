@@ -79,6 +79,11 @@ h6{
 }
 
 footer .container-fluid{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
     background-color: #7371FC;
 }
 
@@ -182,7 +187,12 @@ textarea.form-control{
 } */
 
 .viewThumbnail img{
-    width: 100%;
+    /*width: 100%;*/
+    height: 400px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 10px;
 }
 
@@ -224,6 +234,7 @@ textarea.form-control{
 
 .img-bar .img-responsive{
     margin: 0 auto;
+    max-width: 70%;
 }
 
 .margin8 {
@@ -358,6 +369,9 @@ input[type="file"] {
 
     .img-responsive{
         margin: 0 auto;
+        width: 60%;
+        height: auto;
+
     }
 
     .wrapper .content-bar{
@@ -418,6 +432,8 @@ input[type="file"] {
 
     .img-responsive{
         margin: 0 auto;
+        width: 20%;
+        height: auto;
     }
 
     .wrapper .content-bar{

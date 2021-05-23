@@ -8,7 +8,6 @@
 
             <div class="col-lg-12 bar">
 
-
                 <div class="container">    <div class="panel panel-default">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -18,14 +17,13 @@
 
                         <a  href="{{ url('blog/create') }}"> <button class = "btn-lg btn-secondary longButton" >Create new post</button></a>
 
-                        <div class="panel-heading "> <p class = "text-center"> Your posts</p> </div>
+                        <div class="panel-heading "> <p class = "text-center">Your posts</p> </div>
 
                         <table class="table table-striped">
 
                             <thead>
                             <tr>
-                                <th></th>
-                                <th>Title</th>
+                                <th class="vert-align">Title</th>
                             </tr>
                             </thead>
 
@@ -33,8 +31,8 @@
                             @if(count($posts) > 0)
                                 @foreach($posts as $post)
                                     <tr>
-                                        <td class="col-lg-1 col-md-1 col-xs-2">
-                                        </td>
+{{--                                        <td class="col-lg-1 col-md-1 col-xs-2">--}}
+{{--                                        </td>--}}
                                         <td class="vert-align"><a href="/blog/{{$post->id}}">{{$post->title}}</a></td>
                                         <td class="text-center vert-align"><a href="/blog/{{$post->id}}/edit"><button class = "btn-lg btn-secondary" >Edit</button></a></td>
 
@@ -49,7 +47,7 @@
                                 @endforeach
                             @else
                                 <tr>
-                                    <th><p>You don't have posts yet</p></th>
+                                    <td><p>You don't have posts yet</p></td>
                                 </tr>
 
                             @endif
