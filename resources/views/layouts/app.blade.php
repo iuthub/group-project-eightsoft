@@ -69,7 +69,6 @@
                             <li role="presentation" class="active"><a href="/home">Home</a></li>
                             <li role="presentation"><a href="/blog">Blog</a></li>
                             <li role="presentation"><a href="/dashboard">Dashboard</a></li>
-                            <li role="presentation"><a href="/contacts">Contacts</a></li>
 
                             <!-- Authentication Links -->
                             @guest
@@ -80,6 +79,7 @@
                                 @if (Route::has('register'))
                                     <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
                                 @endif
+                                    <li role="presentation"><a href="/contacts">Contacts</a></li>
                             @else
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -96,6 +96,7 @@
                                         </form>
                                     </div>
                                 </li>
+                                <li role="presentation"><a href="/contacts">Contacts</a></li>
                             @endguest
                         </ul>
                     </div>

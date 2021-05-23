@@ -101,4 +101,9 @@ body{
         background: #F5EFFF;
     }
 }
-  
+
+@media (max-width: 767px) {
+    body {
+        zoom: 150%;
+    }
+}
